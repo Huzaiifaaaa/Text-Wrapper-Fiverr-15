@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1647328089 source:c:\users\huzai\documents\github\text-wrapper-fiverr-15\text wrapper\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/file.h>
+	<sys/types.h>
+
