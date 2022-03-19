@@ -63,7 +63,6 @@ int main(int argc, char** argv)
     else if(argc==3 && strchr(argv[2], '.')==NULL)//if arguments are 3 & directory path is passed
     {
         int status=0;
-        int count=0;//declaring variables
 
         strcpy(Directory, argv[2]);//getting directory path
         status=chdir(Directory);//changing directory
@@ -149,7 +148,7 @@ void WriteFile()
     FILE *writefile;//Filepointer
     writefile = fopen(output,"w");//opening file
 
-    for(int i=0;i<processcounter;i++)//writing to file character by character
+    for(int i=0;i<processcounter-1;i++)//writing to file character by character
     {
         fprintf(writefile,"%c",ProcessedData[i]);
     }
@@ -181,7 +180,7 @@ int ProcessData(int width)
 
         if(SpaceRemoved[i]=='\n')//if character is newline
         {
-            ProcessedData[processcounter]==' ';//replacing it with space
+            ProcessedData[processcounter]=' ';//replacing it with space
             processcounter++;//incrementing
             continue;
         }
